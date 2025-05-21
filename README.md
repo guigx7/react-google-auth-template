@@ -1,59 +1,66 @@
-<<<<<<< HEAD
-# react-google-auth-template
-A template for implementing Google OAuth 2.0 authentication in a React + Vite + Tailwind project.
-=======
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Google Login Template
 
-Currently, two official plugins are available:
+A simple starter template for implementing Google OAuth 2.0 authentication in a React + Vite + Tailwind v4 project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
 
-## Expanding the ESLint configuration
+- **React 18** with **TypeScript**  
+- **Vite** for fast build & HMR  
+- **Tailwind CSS v4** (zero-config)  
+- **@react-oauth/google** for Google sign-in & sign-out
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/your-org/react-vite-google-login-template.git
+   cd react-vite-google-login-template
+   ```
+2. **Install dependencies**  
+   ```bash
+   npm install
+   or
+   yarn
+   ```
+3. **Set up environment variable**  
+   Create a file named `.env.local` in the project root
+   
+   Add your Google Client ID:
+   ```bash
+   VITE_GOOGLE_CLIENT_ID=~~YOUR_CLIENT_ID~~  
+   ```
+   If you don’t have a Google Client ID yet:
+	- Go to the Google Cloud Console.
+	- Create a new project or select an existing one.
+	- Navigate to APIs & Services > Credentials.
+	- Click Create credentials > OAuth client ID.
+	- Choose Web application as the application type.
+	
+	Under Authorized JavaScript origins, add:
+	```bash
+   http://localhost:5173 
+   ```
+   Under Authorized redirect URIs, add:
+	```bash
+   http://localhost:5173 
+   ```
+	-  Click **Create** and copy the **Client ID** shown.
+	- Paste this ID into your `.env.local` as `VITE_GOOGLE_CLIENT_ID`.
+4. **Start the development server**  
+   ```bash
+   npm run dev
+   or
+   yarn dev
+   ```
+5. **Open in browser**  
+Visit [http://localhost:5173](http://localhost:5173), click “Sign in with Google” and see the authenticated user data displayed.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## License
+This project is licensed under the MIT License. See [`LICENSE.txt`](https://github.com/guigx7/react-google-auth-template/blob/main/LICENSE) for more information.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Contact
+LinkedIn: https://www.linkedin.com/in/guigx7/
+Email: guigo211103@gmail.com
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
->>>>>>> b8c51ef (feat: initial project template with React, Vite, Tailwind and Google OAuth)
+  
