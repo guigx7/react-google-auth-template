@@ -1,5 +1,5 @@
 
-# React Google Login Template
+# React Google Auth Template
 
 A simple starter template for implementing Google OAuth 2.0 authentication in a React + Vite + Tailwind v4 project.
 
