@@ -14,8 +14,8 @@ A simple starter template for implementing Google OAuth 2.0 authentication in a 
 
 1. **Clone the repo**  
    ```bash
-   git clone https://github.com/your-org/react-vite-google-login-template.git
-   cd react-vite-google-login-template
+   git clone https://github.com/guigx7/react-google-auth-template.git
+   cd react-google-auth-template
    ```
 2. **Install dependencies**  
    ```bash
@@ -28,7 +28,7 @@ A simple starter template for implementing Google OAuth 2.0 authentication in a 
    
    Add your Google Client ID:
    ```bash
-   VITE_GOOGLE_CLIENT_ID=~~YOUR_CLIENT_ID~~  
+   VITE_GOOGLE_CLIENT_ID=your_google_client_id.apps.googleusercontent.com  
    ```
    If you don’t have a Google Client ID yet:
 	- Go to the Google Cloud Console.
