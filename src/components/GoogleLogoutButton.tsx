@@ -14,7 +14,7 @@ export const GoogleLogoutButton: React.FC<GoogleLogoutButtonProps> = ({
   };
 
   return (
-    <div className="mt-8 flex justify-center">
+    <div className="mt-6 flex justify-center">
       <button
         onClick={handleLogout}
         className="px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition cursor-pointer"
